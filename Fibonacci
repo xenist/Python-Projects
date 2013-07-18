@@ -1,0 +1,6 @@
+# Ask the user for a number
+x = int(input('Enter a number: '))
+#Calculate and print the Fibonacci sequence for that number
+for i in range(x):
+    x += i
+print(x)    
