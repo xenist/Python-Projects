@@ -1,0 +1,28 @@
+# A function to check if a number is prime
+def is_prime(n):
+    if n == 1 or n ==2:
+            return True
+    else: 
+        for i in range(2, n):
+            if n % i == 0:
+                return False
+            else:
+                return True   
+# A function to make a list of prime numbers up to a given one        
+def primes(n):
+    prime_list = []
+    for i in range(n):
+        if is_prime(i): 
+            prime_list.append(i)
+    return prime_list             
+# Asking the user for input
+x = int(input('Enter a number: '))
+pr = primes(x)
+#Creating a list of the given number's prime factors
+factors = []
+for i in pr:
+    if x % i == 0 and i != 1:
+        factors.append(i)
+factors = map(str, factors)        
+#Printing the results in an easily readable format            
+print('The prime factors of', x,'are', ' and '.join(factors))                    
