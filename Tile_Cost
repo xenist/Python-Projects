@@ -1,0 +1,7 @@
+# Asking the user for the variables
+x = float(input('Enter the height of the room in meters: '))
+y = float(input('Enter the width of the room in meters: '))
+z = float(input('Enter the cost of tile per square meter: '))
+#Calculating the cost and printing it
+c = (x * y) * z
+print('The total cost of the tiles is ', round( c , 2))
