@@ -1,0 +1,25 @@
+# A function to check if a number is prime
+def is_prime(n):
+    if n == 1 or n ==2:
+            return True
+    else: 
+        for i in range(2, n):
+            if n % i == 0:
+                return False
+            else:
+                return True   
+
+n = 0
+# A loop that keeps asking the user for input in order to run
+while True:
+    x = input('Would you like the next number (y/n) :')
+    if x == 'y':
+        # Raising the number by one
+        n += 1
+        # Checking if the number is prime and printing the result
+        if is_prime(n):
+            print(n, 'is a prime mumber.')
+        else:
+            print(n, 'is not a prime number.')                  
+    else:
+        break 
