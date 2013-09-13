@@ -1,0 +1,9 @@
+# Inputting the mortgage amount and interest 
+P = float(input('Enter the amount of the mortgage: '))
+x = float(input('Enter the yearly interest: '))
+N = float(input('Enter the number of payments: '))
+# Turning the interest into a decimal
+r = (x/12)/100
+# Outputting the answers
+c = ((P*r)*((1+r)**N))/((1+r)**N-1)
+print('The monthly mortage payment is ', round(c, 2)) 
